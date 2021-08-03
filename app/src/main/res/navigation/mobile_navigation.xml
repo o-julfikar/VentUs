@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_forum">
+
+    <fragment
+        android:id="@+id/navigation_forum"
+        android:name="com.zulfikar.ventus.view.ui.forum.ForumFragment"
+        android:label="@string/title_forum"
+        tools:layout="@layout/fragment_forum" >
+        <action
+            android:id="@+id/action_navigation_forum_to_navigation_swap"
+            app:destination="@id/navigation_swap" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_review"
+        android:name="com.zulfikar.ventus.view.ui.review.ReviewFragment"
+        android:label="@string/title_review"
+        tools:layout="@layout/fragment_review" />
+
+    <fragment
+        android:id="@+id/navigation_swap"
+        android:name="com.zulfikar.ventus.view.ui.swap.SwapFragment"
+        android:label="@string/title_swap"
+        tools:layout="@layout/fragment_swap" >
+        <action
+            android:id="@+id/action_navigation_swap_to_navigation_review"
+            app:destination="@id/navigation_review" />
+    </fragment>
+</navigation>

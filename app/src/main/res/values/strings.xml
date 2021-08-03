@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">VentUs</string>
+    <string name="title_activity_home">Vent Us</string>
+    <string name="title_forum">Forum</string>
+    <string name="title_review">Review</string>
+    <string name="title_swap">Swap</string>
 </resources>
