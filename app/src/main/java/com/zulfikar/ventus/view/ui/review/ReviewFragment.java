@@ -23,11 +23,10 @@ public class ReviewFragment extends Fragment {
         reviewViewModel =
                 new ViewModelProvider(this).get(ReviewViewModel.class);
         View root = inflater.inflate(R.layout.fragment_review, container, false);
-        final TextView textView = root.findViewById(R.id.text_dashboard);
         reviewViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
-                textView.setText(s);
+
             }
         });
         return root;
